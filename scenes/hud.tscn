@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dkckehmxr7ash"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Hud" type="CanvasLayer"]
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 2.0
