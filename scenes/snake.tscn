@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://6iogs67w8w4v"]
+
+[ext_resource type="Texture2D" uid="uid://q2eo0j3di6w0" path="res://assets/snake_body.png" id="1_yq4sl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wivo"]
+atlas = ExtResource("1_yq4sl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pbmmc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wivo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xh5cd"]
+size = Vector2(14, 14)
+
+[node name="Snake" type="CharacterBody2D"]
+position = Vector2(951, 508)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pbmmc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xh5cd")
