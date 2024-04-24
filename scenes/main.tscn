@@ -10,5 +10,7 @@
 unique_name_in_owner = true
 
 [node name="snake_food" parent="." instance=ExtResource("2_ky124")]
+unique_name_in_owner = true
 
 [node name="hud" parent="." instance=ExtResource("3_vl4ia")]
+unique_name_in_owner = true
