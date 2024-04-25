@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://py5fm3d2i8xc"]
+
+[ext_resource type="Texture2D" uid="uid://b57pk46cqqfvs" path="res://assets/obstacle.png" id="1_lnkve"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_136b2"]
+atlas = ExtResource("1_lnkve")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6e2cl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_136b2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="obstacle" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6e2cl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 0.479166)
+scale = Vector2(1, 0.979167)
+polygon = PackedVector2Array(2, -16, 17, 14, -16, 14, 1, -16)
