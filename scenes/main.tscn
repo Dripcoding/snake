@@ -7,16 +7,16 @@
 
 [node name="main" type="Node2D"]
 
-[node name="snake" parent="." instance=ExtResource("1_d0hc5")]
+[node name="Snake" parent="." instance=ExtResource("1_d0hc5")]
 unique_name_in_owner = true
 
-[node name="snake_food" parent="." instance=ExtResource("2_ky124")]
+[node name="SnakeFood" parent="." instance=ExtResource("2_ky124")]
 unique_name_in_owner = true
 position = Vector2(900, 900)
 
-[node name="hud" parent="." instance=ExtResource("3_vl4ia")]
+[node name="Hud" parent="." instance=ExtResource("3_vl4ia")]
 unique_name_in_owner = true
 
-[node name="obstacle" parent="." instance=ExtResource("4_5pjl4")]
+[node name="Obstacle" parent="." instance=ExtResource("4_5pjl4")]
 unique_name_in_owner = true
 position = Vector2(500, 200)
