@@ -10,7 +10,7 @@ func before_each():
 
 func after_each():
 	var hud = get_node("Hud")
-	hud.free()
+	autofree(hud)
 
 
 func test_hud_exists():

@@ -10,7 +10,7 @@ func before_each():
 
 func after_each():
 	var snake = get_node("Snake")
-	snake.free()
+	autofree(snake)
 
 
 func test_snake_is_character_body():
