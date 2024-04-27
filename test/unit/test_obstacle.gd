@@ -10,7 +10,7 @@ func before_each():
 
 func after_each():
 	var obstacle = get_node("Obstacle")
-	obstacle.free()
+	autofree(obstacle)
 
 
 func test_obstacle_is_static_body():

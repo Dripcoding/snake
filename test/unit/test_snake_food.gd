@@ -10,7 +10,7 @@ func before_each():
 
 func after_each():
 	var snake_food = get_node("SnakeFood")
-	snake_food.free()
+	autofree(snake_food)
 
 
 func test_snake_food_is_static_body():
