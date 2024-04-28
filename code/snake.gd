@@ -10,13 +10,13 @@ extends CharacterBody2D
 func _process(delta: float) -> void:
 	velocity = Vector2.ZERO
 
-	if Input.is_action_pressed("arrow_key_move_left"):
+	if Input.is_action_pressed("arrow_key_move_left") or Input.is_action_pressed('a_move_left'):
 		velocity.x = -SPEED
-	elif Input.is_action_pressed("arrow_key_move_right"):
+	elif Input.is_action_pressed("arrow_key_move_right") or Input.is_action_pressed('d_move_right'):
 		velocity.x = SPEED
-	elif Input.is_action_pressed("arrow_key_move_up"):
+	elif Input.is_action_pressed("arrow_key_move_up") or Input.is_action_pressed('w_move_up'):
 		velocity.y = -SPEED
-	elif Input.is_action_pressed("arrow_key_move_down"):
+	elif Input.is_action_pressed("arrow_key_move_down") or Input.is_action_pressed('s_move_down'):
 		velocity.y = SPEED
 
 	position += velocity * delta
