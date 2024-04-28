@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://6iogs67w8w4v"]
+[gd_scene load_steps=6 format=3 uid="uid://6iogs67w8w4v"]
 
+[ext_resource type="Script" path="res://code/snake.gd" id="1_8u0ot"]
 [ext_resource type="Texture2D" uid="uid://q2eo0j3di6w0" path="res://assets/snake_body.png" id="1_yq4sl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wivo"]
@@ -22,9 +23,11 @@ size = Vector2(14, 14)
 
 [node name="Snake" type="CharacterBody2D"]
 position = Vector2(951, 508)
+script = ExtResource("1_8u0ot")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pbmmc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_xh5cd")
