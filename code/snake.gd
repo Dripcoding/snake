@@ -7,7 +7,7 @@ extends CharacterBody2D
 @onready var screen_size: Vector2 = get_viewport_rect().end
 
 
-func _pysics(delta) -> void:
+func _process(delta: float) -> void:
 	velocity = Vector2.ZERO
 
 	if Input.is_action_pressed("arrow_key_move_left"):

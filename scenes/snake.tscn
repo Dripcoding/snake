@@ -24,6 +24,7 @@ size = Vector2(14, 14)
 [node name="Snake" type="CharacterBody2D"]
 position = Vector2(951, 508)
 script = ExtResource("1_8u0ot")
+SPEED = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pbmmc")
