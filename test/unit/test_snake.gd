@@ -12,6 +12,7 @@ func before_each():
 func after_each():
 	var snake = get_node("Snake")
 	autofree(snake)
+	assert_no_new_orphans()
 
 
 func test_snake_is_character_body():
