@@ -9,7 +9,6 @@
 
 [node name="Snake" parent="." instance=ExtResource("1_d0hc5")]
 unique_name_in_owner = true
-SPEED = null
 
 [node name="SnakeFood" parent="." instance=ExtResource("2_ky124")]
 unique_name_in_owner = true
