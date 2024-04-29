@@ -29,4 +29,7 @@ func _process(delta: float) -> void:
 	var position_y = clamp(position.y, Vector2.ZERO.y + offset_y, screen_size.y - offset_y)
 
 	position = Vector2(position_x, position_y)
-	
+
+
+func _on_snake_food_eaten():
+	print('snake food eaten')

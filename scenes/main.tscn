@@ -9,6 +9,7 @@
 
 [node name="Snake" parent="." instance=ExtResource("1_d0hc5")]
 unique_name_in_owner = true
+SPEED = 300.0
 
 [node name="SnakeFood" parent="." instance=ExtResource("2_ky124")]
 unique_name_in_owner = true
@@ -20,3 +21,5 @@ unique_name_in_owner = true
 [node name="Obstacle" parent="." instance=ExtResource("4_5pjl4")]
 unique_name_in_owner = true
 position = Vector2(500, 200)
+
+[connection signal="food_eaten" from="SnakeFood" to="Snake" method="_on_snake_food_eaten"]
