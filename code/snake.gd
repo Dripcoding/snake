@@ -33,3 +33,6 @@ func _process(delta: float) -> void:
 
 func _on_snake_food_eaten():
 	print('snake food eaten')
+
+func _on_obstacle_body_entered(body:Node2D):
+	print('obstacle body entered')
