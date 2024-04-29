@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfcbcosic8s3f"]
+[gd_scene load_steps=6 format=3 uid="uid://cfcbcosic8s3f"]
 
 [ext_resource type="Texture2D" uid="uid://bsnpcinpwq1lb" path="res://assets/snake_food.png" id="1_3uikp"]
+[ext_resource type="Script" path="res://scenes/snake_food.gd" id="1_vd0h5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vp2al"]
 atlas = ExtResource("1_3uikp")
@@ -20,10 +21,13 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_loe4k"]
 radius = 16.0
 
-[node name="SnakeFood" type="StaticBody2D"]
+[node name="SnakeFood" type="Area2D"]
+script = ExtResource("1_vd0h5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hfs4l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_loe4k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
