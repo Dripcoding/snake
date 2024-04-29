@@ -22,3 +22,4 @@ unique_name_in_owner = true
 position = Vector2(500, 200)
 
 [connection signal="food_eaten" from="SnakeFood" to="Snake" method="_on_snake_food_eaten"]
+[connection signal="collided_with_obstacle" from="Obstacle" to="Snake" method="_on_collided_with_obstacle"]
