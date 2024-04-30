@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
 
+signal collided_with_obstacle
+
+
 @export var SPEED: float = 300
 
 
@@ -31,5 +34,9 @@ func _process(delta: float) -> void:
 	position = Vector2(position_x, position_y)
 
 
-func _on_snake_food_eaten():
+func _on_snake_food_eaten() -> void:
 	print('snake food eaten')
+
+
+func _on_collided_with_obstacle():
+	print('snake collided with obstacle')
