@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 
-signal collided_with_obstacle
 signal snake_died
 
 

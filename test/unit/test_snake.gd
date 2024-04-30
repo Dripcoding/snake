@@ -114,3 +114,14 @@ func test_snake_moves_down_with_s_key():
 
 	var new_position = snake.position
 	assert_true(new_position.y > original_position.y, "Snake did not move down")
+
+
+func test_snake_died_signal_emitted():
+	var snake = get_node("Snake")
+	
+	watch_signals(snake)
+
+	snake._on_collided_with_obstacle()
+
+	assert_signal_emitted(snake, "snake_died")
+	assert_signal_emit_count(snake, "snake_died", 1)
