@@ -16,3 +16,12 @@ offset_right = 193.0
 offset_bottom = 83.0
 theme_override_font_sizes/font_size = 32
 text = "High Score: 0"
+
+[node name="GameStatusLabel" type="Label" parent="."]
+visible = false
+offset_left = 670.0
+offset_top = 8.0
+offset_right = 1137.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 32
+text = "GAME OVER"
