@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 signal collided_with_obstacle
+signal snake_died
 
 
 @export var SPEED: float = 300
@@ -38,5 +39,7 @@ func _on_snake_food_eaten() -> void:
 	print('snake food eaten')
 
 
-func _on_collided_with_obstacle():
+func _on_collided_with_obstacle() -> void:
 	print('snake collided with obstacle')
+	snake_died.emit()
+	

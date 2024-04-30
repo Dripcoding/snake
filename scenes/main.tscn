@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccdt0ha5741ou"]
+[gd_scene load_steps=6 format=3 uid="uid://ccdt0ha5741ou"]
 
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_640g1"]
 [ext_resource type="PackedScene" uid="uid://6iogs67w8w4v" path="res://scenes/snake.tscn" id="1_d0hc5"]
 [ext_resource type="PackedScene" uid="uid://cfcbcosic8s3f" path="res://scenes/snake_food.tscn" id="2_ky124"]
 [ext_resource type="PackedScene" uid="uid://dkckehmxr7ash" path="res://scenes/hud.tscn" id="3_vl4ia"]
 [ext_resource type="PackedScene" uid="uid://py5fm3d2i8xc" path="res://scenes/obstacle.tscn" id="4_5pjl4"]
 
 [node name="main" type="Node2D"]
+script = ExtResource("1_640g1")
 
 [node name="Snake" parent="." instance=ExtResource("1_d0hc5")]
 unique_name_in_owner = true
+SPEED = 300.0
 
 [node name="SnakeFood" parent="." instance=ExtResource("2_ky124")]
 unique_name_in_owner = true
@@ -21,5 +24,6 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 position = Vector2(500, 200)
 
+[connection signal="snake_died" from="Snake" to="." method="_on_snake_died"]
 [connection signal="food_eaten" from="SnakeFood" to="Snake" method="_on_snake_food_eaten"]
 [connection signal="collided_with_obstacle" from="Obstacle" to="Snake" method="_on_collided_with_obstacle"]
